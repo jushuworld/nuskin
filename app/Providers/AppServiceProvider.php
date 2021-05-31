@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use NascentAfrica\Jetstrap\JetstrapFacade;
-use Illuminate\Pagination\Paginator;
+//use NascentAfrica\Jetstrap\JetstrapFacade;
+//use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,8 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Paginator::useBootstrap();
-        JetstrapFacade::useCoreUi3();
-        JetstrapFacade::useAdminLte3();
+//        Paginator::useBootstrap();
+//        JetstrapFacade::useCoreUi3();
+//        JetstrapFacade::useAdminLte3();
     }
 }

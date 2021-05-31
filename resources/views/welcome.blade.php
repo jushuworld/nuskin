@@ -22,24 +22,33 @@
         <link href="/css/app.css" rel="stylesheet">
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
+        <div class="relative flex-column items-top justify-center min-h-screen sm:items-center mx-auto px-6 py-4 sm:pt-0">
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                <div class="flex justify-content-end">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
+                        <a href="{{ route('login') }}" class="text-lg text-gray-700 underline">Log in</a>
+{{--                        @if (Route::has('register'))--}}
+{{--                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>--}}
+{{--                        @endif--}}
                     @endauth
+                </div>
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             @endif
                 <form action="create" method="POST">
                     @csrf
-                    <div class="form-group d-flex justify-content-center display-1">
-                        Beauty Focus Collagen +
+                    <div class="form-group flex flex-row">
+                        <img class="img-fluid" style="height: 10vh" src="{{ asset("/img/Fountain-logo.png") }}" alt="Nu Skin">
+                        <p class="px-6 align-content-center" style="width: 80vw; font-size: 4vh">Beauty Focus Collagen+</p>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -134,8 +143,8 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="3">4</option>
-                            <option value="3">5</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                     <div class="form-group">

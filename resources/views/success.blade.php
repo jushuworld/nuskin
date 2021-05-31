@@ -22,11 +22,14 @@
     <link href="/css/app.css" rel="stylesheet">
 </head>
 <body class="antialiased">
-    <div class="relative flex flex-column items-top justify-center justify-content-around min-h-screen sm:items-center py-4 sm:pt-0">
-        <div class="display-2">
-            Thank you for registering your orders!
+    <div class="relative flex flex-column items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
+        <div class="d-flex justify-content-center">
+            <img class="img-fluid" style="width: 40vw" src="{{ asset("/img/Fountain-logo.png") }}" alt="Nu Skin">
         </div>
         <div class="d-flex justify-content-center">
+            <p class="h1 d-flex justify-content-center text-center">Thank you <br> Your order has been <br> successfully registered!</p>
+        </div>
+        <div class="d-flex justify-content-center py-4">
             <input class="d-flex justify-content-center btn btn-primary" type="button" value="Go Back" onclick="history.back(-1)" />
         </div>
     </div>

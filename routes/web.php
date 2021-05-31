@@ -20,8 +20,9 @@ Route::get('/', function () {
 
 Route::post('create', [CustomerController::class, 'store']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [CustomerController::class, 'index']
+//    function () {
+//    return view('dashboard');}
+)->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

@@ -27,8 +27,8 @@
                 <!-- Brand Logo -->
                 <a href="/" class="brand-link">
 {{--                    <x-application-logo width="36" class="brand-image" />--}}
-                    <img class="img-fluid" style="width: 80px" src="{{ asset("/img/Fountain-logo.png") }}" alt="Nu Skin">
-                    <span class="brand-text font-weight-bolder">{{ config('app.name') }}</span>
+                    <img class="img-fluid" style="width: 80px" src="{{ asset("/img/IMG_6579.JPG") }}" alt="Nu Skin">
+                    <span class="brand-text font-weight-bolder">{{ Auth::user()->name . "'s World" }}</span>
                 </a>
 
                 <!-- Sidebar -->

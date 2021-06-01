@@ -9,8 +9,8 @@
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-5">
-                            <h2>Customers</h2>
+                        <div class="col-sm-5 pb-3">
+                            <h2>{{ Auth::user()->name }}'s Customers</h2>
                         </div>
                     </div>
                 </div>

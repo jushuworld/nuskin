@@ -3,7 +3,7 @@
         <x-slot name="logo">
             <a href="/">
 {{--                <x-application-logo width="82" />--}}
-                <img class="img-fluid" style="height: 20vh" src="{{ asset("/img/Fountain-logo.png") }}" alt="Nu Skin">
+                <img class="img-fluid" style="height: 20vh" src="{{ asset("/img/IMG_6579.JPG") }}" alt="Nu Skin">
             </a>
         </x-slot>
 

@@ -24,7 +24,7 @@
 <body class="antialiased">
     <div class="relative flex flex-column items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
         <div class="d-flex justify-content-center">
-            <img class="img-fluid" style="width: 40vw" src="{{ asset("/img/Fountain-logo.png") }}" alt="Nu Skin">
+            <img class="img-fluid" style="width: 40vw" src="{{ asset("/img/IMG_6579.JPG") }}" alt="Nu Skin">
         </div>
         <div class="d-flex justify-content-center">
             <p class="h1 d-flex justify-content-center text-center">Thank you <br> Your order has been <br> successfully registered!</p>

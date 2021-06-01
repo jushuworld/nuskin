@@ -46,9 +46,9 @@
             @endif
                 <form action="create" method="POST">
                     @csrf
-                    <div class="form-group flex flex-row">
-                        <img class="img-fluid" style="height: 10vh" src="{{ asset("/img/Fountain-logo.png") }}" alt="Nu Skin">
-                        <p class="px-6 align-content-center" style="width: 80vw; font-size: 4vh">Beauty Focus Collagen+</p>
+                    <div class="form-group flex flex-row align-content-center justify-content-center">
+                        <img class="img-fluid" style="height: 15vh" src="{{ asset("/img/IMG_6579.JPG") }}" alt="Nu Skin">
+                        <p class="px-6" style="font-size: 4vh; margin: 0px">Beauty Focus <br> Collagen+</p>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">

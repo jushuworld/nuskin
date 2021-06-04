@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Contracts\View\View;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
@@ -19,7 +18,8 @@ class CustomerController extends Controller
      */
     protected function index(Request $request)
     {
-        $users = Customer::all();
+        $user_id = Auth::user()->id;
+        $users = Customer::where('sponsor', $user_id)->get();
         return view('dashboard')->with('users', $users);
     }
 
@@ -38,6 +38,7 @@ class CustomerController extends Controller
 
         $customer = new Customer();
         $customer->name = $request->input('name');
+        $customer->sponsor = $request->input('sponsor');
         $customer->phone_number = $request->input('phone_number');
         $customer->address1 = $request->input('address1');
         $customer->address2 = $request->input('address2');

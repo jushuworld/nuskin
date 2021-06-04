@@ -29,9 +29,9 @@
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="text-lg text-gray-700 underline">Log in</a>
-{{--                        @if (Route::has('register'))--}}
-{{--                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>--}}
-{{--                        @endif--}}
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
                     @endauth
                 </div>
             @endif
@@ -59,6 +59,15 @@
                             <label for="inputTell">Phone Number (10 digits without +1)</label>
                             <input type="text" name="phone_number" class="form-control bfh-phone" id="inputTell" placeholder="e.g. 1234567890" required="required" pattern="[0-9]{10}" maxlength="10">
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSponsor">Sponsor</label>
+                        <select id="inputSponsor" name="sponsor" class="form-control" required="required">
+                            <option value="">Choose Your Sponsor...</option>
+                            @foreach(\App\Models\User::all() as $user)
+                                <option value={{ $user->id }}>{{ $user->name . ' - ' . $user->email }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Address</label>

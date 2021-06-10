@@ -45,7 +45,7 @@ class CustomerController extends Controller
         $customer->city = $request->input('city');
         $customer->zipcode = $request->input('zipcode');
         $customer->quantity = $request->input('quantity');
-        $customer->deposit = '$279.00';
+        $customer->deposit = '0.00';
         $customer->pay_method = $request->input('inlineRadioOptions');
         $customer->save();
         return view('success');

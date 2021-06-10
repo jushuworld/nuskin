@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Lumi_Spa's World</title>
+        <title>W2-GROUP</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@
                         <select id="inputSponsor" name="sponsor" class="form-control" required="required">
                             <option value="">Choose Your Sponsor...</option>
                             @foreach(\App\Models\User::all() as $user)
-                                <option value={{ $user->id }}>{{ $user->name . ' - ' . $user->email }}</option>
+                                <option value={{ $user->id }}>{{ $user->id . '. ' . $user->name . ' - ' . $user->email }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -149,11 +149,11 @@
                         <label for="inputQuantity">Quantity</label>
                         <select id="inputQuantity" name="quantity" class="form-control" required="required">
                             <option value="">Select How Many Orders You Want</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option value="1">1 X $279 = $279 + tax</option>
+                            <option value="2">2 X $279 = $558 + tax</option>
+                            <option value="3">3 X $279 = $837 + tax</option>
+                            <option value="4">4 X $279 = $1116 + tax</option>
+                            <option value="5">5 X $279 = $1395 + tax</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -162,7 +162,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" name="deposit" class="form-control" value="279" aria-label="Amount (to the nearest dollar)" disabled="true">
+                            <input type="text" name="deposit" class="form-control" value="0" aria-label="Amount (to the nearest dollar)" disabled="true">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
